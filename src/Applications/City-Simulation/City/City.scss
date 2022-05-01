@@ -1,0 +1,238 @@
+.City_div {
+  height: 100%;
+  position: relative;
+  background-color: #d9e5e7;
+  .Canvas_div {
+    overflow: hidden;
+    position: relative;
+    .Canvas_and_Algorithm_Configs_Icons {
+      position: absolute;
+      //border: 2px solid green;
+      width: 50%;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      img {
+        width: 4rem;
+        height: 4rem;
+        margin: 0.5rem;
+        margin-top: 1rem;
+        margin-left: 2.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          transform: scale(1.01);
+        }
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+      div {
+        //  border: 2px solid red;
+        margin-left: 1rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+        padding: 1rem;
+        color: white;
+      }
+    }
+    &__Algorithms {
+      //border: 2px solid red;
+      position: absolute;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      font-size: 2rem;
+      padding: 1rem;
+      background-color: rgba(35, 44, 45, 0.6);
+      color: white;
+      opacity: 0;
+      z-index: -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.4rem;
+      width: 25rem;
+      height: 6rem;
+      cursor: pointer;
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    #Dijkstra {
+      top: 8rem;
+      left: 2rem;
+    }
+    #Bidirectional-Dijkstra {
+      top: 16rem;
+      left: 2rem;
+    }
+    // border: 2px solid red;
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 3px;
+    background: #70e1f5; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #ffd194,
+      #70e1f5
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #ffd194,
+      #70e1f5
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    transform: translate(-50%, -50%);
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.City {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  //border: 2px solid red;
+  width: 90%;
+  margin: 0 auto;
+  &__Buttons {
+    border-radius: 3px;
+    background-color: #b4f2f9;
+    color: black;
+    padding: 0 1rem 0 1rem;
+    font-size: 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.02);
+    }
+    &:active {
+      transform: scale(0.9);
+      filter: brightness(1.02);
+    }
+  }
+  &__Config {
+    position: absolute;
+    // border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+    //margin: 0 2rem 0 2rem;
+    z-index: 2;
+    top: 4rem;
+    right: 1rem;
+  }
+  .Config__DropDown {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    position: absolute;
+    color: white;
+    background-color: rgba(35, 44, 45, 0.3);
+    border-radius: 3px;
+    padding: 1rem;
+    top: 9rem;
+    right: 2rem;
+    z-index: 2;
+    &_Row {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 0 0.5rem 0;
+      div:nth-child(2) {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+// .City__Canvas {
+//   background-color: #d9e5e7;
+//   position: relative;
+//   width: 90vw !important;
+//     height: 80vh !important;
+//   canvas {
+//     // background: -webkit-linear-gradient(
+//     //   to right,
+//     //   #6190e8,
+//     //   #a7bfe8
+//     // ); /* Chrome 10-25, Safari 5.1-6 */
+//     // background: linear-gradient(
+//     //   to right,
+//     //   #6190e8,
+//     //   #a7bfe8
+//     // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//     background-color: red;
+//     border-radius: 2px;
+//     position: absolute;
+//     top: 45%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+
+//   }
+// }
+
+.input-number {
+  width: 80px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+}
+
+.input-number,
+.input-number-decrement,
+.input-number-increment {
+  border: 1px solid #ccc;
+  height: 40px;
+  user-select: none;
+}
+
+.input-number-decrement,
+.input-number-increment {
+  display: inline-block;
+  width: 30px;
+  line-height: 38px;
+  background: #f1f1f1;
+  color: #444;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.input-number-decrement:active,
+.input-number-increment:active {
+  background: #ddd;
+}
+
+.input-number-decrement {
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.input-number-increment {
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.show {
+  z-index: 2 !important;
+  animation-name: slide-in-left;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
